@@ -67,7 +67,11 @@ resources: {}
 nodeSelector: {}
 
 # -- Pod tolerations
-tolerations: []
+tolerations:
+  - key: priority
+    operator: Equal
+    value: "store"
+    effect: NoSchedule
 
 # -- Pod affinity
 affinity: {}
