@@ -76,7 +76,7 @@ jobs:
       - name: Clone Helm Chart Repo
         uses: actions/checkout@v3
         with:
-          repository: ElananRodrigues/helm-store 
+          repository: ElananRodrigues/helm-store
           ref: pre-deployment
           token: '${{ secrets.TOKEN_HELM_STORE }}'
           path: ./helm-store
