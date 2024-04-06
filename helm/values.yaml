@@ -12,7 +12,8 @@ image:
   pullPolicy: IfNotPresent
 
 # -- Image pull secrets to use when pulling the image
-imagePullSecrets: []
+imagePullSecrets:
+  - name: regcred
 
 # -- Override the Helm chart name
 nameOverride: ""
@@ -120,7 +121,6 @@ livenessProbe:
   timeoutSeconds: 30
   # Path that the probe will access to determine liveness
   path: "/"
-
 
 # -- Pod topology spread configuration
 # see: https://kubernetes.io/docs/concepts/workloads/pods/pod-topology-spread-constraints/#api
